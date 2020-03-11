@@ -10,11 +10,11 @@
         <Grid.Background>
             <ImageBrush ImageSource="sea.png" Opacity="0.70"/>
         </Grid.Background>
-        
-        <Image x:Name="testImage1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="438,118,0,0"  Width="40" Source="Picture2.png" Stretch="Fill" />
+
+        <Image x:Name="testImage1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="438,118,0,0"  Width="40" Source="Picture3.png" Stretch="Fill"  />
         <Image x:Name="testImage2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="153,60,0,0"  Width="40" Source="Picture1.png" Stretch="Fill" RenderTransformOrigin="1.029,0.409" />
         <Image x:Name="testImage3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="100,350,0,0"  Width="40" Source="Picture1.png" Stretch="Fill" />
-        <Image x:Name="testImage4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="540,203,0,0"  Width="40" Source="Picture3.png" Stretch="Fill" />
+        <Image x:Name="testImage4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="540,203,0,0"  Width="40" Source="Picture2.png" Stretch="Fill" Visibility="Hidden"  />
 
 
     </Grid>

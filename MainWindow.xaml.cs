@@ -39,7 +39,7 @@ namespace AlgorithmsStage2
 
         #region Random Number
 
-        // Add code here
+        Random rand;
 
         #endregion
 
@@ -88,9 +88,9 @@ namespace AlgorithmsStage2
             #region Follow
 
             //Bitches
-            Follow(testImage2, testImage1, 1.50);    //Bitch 1
+            Follow(testImage2, testImage4, 1.50);    //Bitch 1
            // Lock_To_Grid(testImage2,TestGrid);
-            Follow(testImage3, testImage1, 1.75);    //Bitch 2
+            Follow(testImage3, testImage4, 1.75);    //Bitch 2
            // Lock_To_Grid(testImage3, TestGrid);
             #endregion
 
@@ -191,12 +191,19 @@ namespace AlgorithmsStage2
 
         public void Move_Lock_To_Grid(Image anImage, Grid TestGrid)
         {
+            int ctr = 0;
+
 
             double speed = 2;
             double leftMargin = anImage.Margin.Left;
             double rightMargin = anImage.Margin.Right;
             double topMargin = anImage.Margin.Top;
             double bottomMargin = anImage.Margin.Bottom;
+
+
+            rand = new Random(DateTime.Now.Millisecond);
+            int randomFlag = rand.Next(0, 2);
+
 
             if (topMargin < (TestGrid.Height - TestGrid.Height))
             {
@@ -223,6 +230,17 @@ namespace AlgorithmsStage2
                 leftMargin = TestGrid.Width - testImage1.Width;
                 testFlag1X = !testFlag1X;
             }
+
+            ctr++;
+
+            if (ctr > 200) {
+                
+                testFlag1X = Convert.ToBoolean(randomFlag);
+                testFlag1Y = Convert.ToBoolean(randomFlag);
+                ctr = 0;
+            }
+
+
 
             if (testFlag1X) leftMargin -= speed;
             else if (!testFlag1X) leftMargin += speed;
@@ -285,7 +303,7 @@ namespace AlgorithmsStage2
         public void Runaway(Image anImage, Image target, double speed)
         {
 
-            double distance = 50;
+            double distance = 150;
             double anImageLeft = anImage.Margin.Left;
             double anImageRight = anImage.Margin.Right;
             double anImageTop = anImage.Margin.Top;
@@ -308,6 +326,7 @@ namespace AlgorithmsStage2
             else if (anImageTop < target.Margin.Top + target.Height + distance )
             {
                 anImageTop += speed;
+               
             }
 
             anImage.Margin = new Thickness(anImageLeft, anImageTop, anImageRight, anImageBottom);
