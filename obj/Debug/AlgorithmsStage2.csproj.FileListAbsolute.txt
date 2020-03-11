@@ -40,3 +40,17 @@ C:\Users\Aguil\source\repos\AlgorithmsStage2\obj\Debug\AlgorithmsStage2.Properti
 C:\Users\Aguil\source\repos\AlgorithmsStage2\obj\Debug\AlgorithmsStage2.csproj.GenerateResource.cache
 C:\Users\Aguil\source\repos\AlgorithmsStage2\obj\Debug\AlgorithmsStage2.exe
 C:\Users\Aguil\source\repos\AlgorithmsStage2\obj\Debug\AlgorithmsStage2.pdb
+C:\Users\30029307\source\repos\Algo2\bin\Debug\AlgorithmsStage2.exe.config
+C:\Users\30029307\source\repos\Algo2\bin\Debug\AlgorithmsStage2.exe
+C:\Users\30029307\source\repos\Algo2\bin\Debug\AlgorithmsStage2.pdb
+C:\Users\30029307\source\repos\Algo2\obj\Debug\AlgorithmsStage2.csprojAssemblyReference.cache
+C:\Users\30029307\source\repos\Algo2\obj\Debug\MainWindow.g.cs
+C:\Users\30029307\source\repos\Algo2\obj\Debug\App.g.cs
+C:\Users\30029307\source\repos\Algo2\obj\Debug\AlgorithmsStage2_MarkupCompile.cache
+C:\Users\30029307\source\repos\Algo2\obj\Debug\AlgorithmsStage2_MarkupCompile.lref
+C:\Users\30029307\source\repos\Algo2\obj\Debug\MainWindow.baml
+C:\Users\30029307\source\repos\Algo2\obj\Debug\AlgorithmsStage2.g.resources
+C:\Users\30029307\source\repos\Algo2\obj\Debug\AlgorithmsStage2.Properties.Resources.resources
+C:\Users\30029307\source\repos\Algo2\obj\Debug\AlgorithmsStage2.csproj.GenerateResource.cache
+C:\Users\30029307\source\repos\Algo2\obj\Debug\AlgorithmsStage2.exe
+C:\Users\30029307\source\repos\Algo2\obj\Debug\AlgorithmsStage2.pdb

@@ -79,29 +79,27 @@ namespace AlgorithmsStage2
 
             #region Move_Lock_To_Grid
 
-            // Add code here
+           
+            //MAIN
+            Move_Lock_To_Grid(testImage1, TestGrid);
 
             #endregion
 
-            //MAIN
-            Move_Lock_To_Grid(testImage1,TestGrid);
-
-            //Bitches
-            Follow(testImage2,testImage1,1.50);    //Bitch 1
-            Follow(testImage3, testImage1, 1.75);    //Bitch 2
-
-
-
             #region Follow
 
-            // Add code here
-
+            //Bitches
+            Follow(testImage2, testImage1, 1.50);    //Bitch 1
+           // Lock_To_Grid(testImage2,TestGrid);
+            Follow(testImage3, testImage1, 1.75);    //Bitch 2
+           // Lock_To_Grid(testImage3, TestGrid);
             #endregion
 
             #region Runaway
 
-           Runaway(testImage4,testImage1,0.25);
-           Lock_To_Grid(testImage4,TestGrid);
+            Runaway(testImage4,testImage1,3);
+            Lock_To_Grid(testImage4,TestGrid);
+            Follow(testImage4, testImage1, 2);    //Bitch 2
+
 
             #endregion
 
@@ -155,6 +153,7 @@ namespace AlgorithmsStage2
         public void Lock_To_Grid(Image anImage, Grid TestGrid)
         {
             double speed = 1;
+            
             double leftMargin = anImage.Margin.Left;
             double rightMargin = anImage.Margin.Right;
             double topMargin = anImage.Margin.Top;
@@ -249,10 +248,9 @@ namespace AlgorithmsStage2
 
 
 
-            if (anImageLeft + target.Width < target.Margin.Left )
+            if (anImageLeft + anImage.Width < target.Margin.Left )
             {
                 //Go Right
-                Console.WriteLine("Within range");
                 anImageLeft += velocity;
             }
             else if (anImageLeft > target.Margin.Left + target.Width)
@@ -288,28 +286,26 @@ namespace AlgorithmsStage2
         {
 
             double distance = 50;
-
-
-
             double anImageLeft = anImage.Margin.Left;
             double anImageRight = anImage.Margin.Right;
             double anImageTop = anImage.Margin.Top;
             double anImageBottom = anImage.Margin.Bottom;
 
-            if ((anImageLeft + anImage.Width) < target.Margin.Left + distance )
+            if ((anImageLeft + anImage.Width) > target.Margin.Left - distance )
             {
+                Console.WriteLine(target.Margin.Left + distance);
                 anImageLeft -= speed;
             }
-            else if (anImageLeft > target.Margin.Left + target.Width )
+            else if (anImageLeft < target.Margin.Left + target.Width + distance)
             {
                 anImageLeft += speed;
             }
 
-            if ((anImageTop + anImage.Height) < target.Margin.Top + distance )
+            if ((anImageTop + anImage.Height) > target.Margin.Top - distance )
             {
                 anImageTop -= speed;
             }
-            else if (anImageTop > target.Margin.Top + target.Height )
+            else if (anImageTop < target.Margin.Top + target.Height + distance )
             {
                 anImageTop += speed;
             }
@@ -327,13 +323,12 @@ namespace AlgorithmsStage2
             if ((anImage.Margin.Left + anImage.Width) > target.Margin.Left && anImage.Margin.Left < (target.Margin.Left + target.Width) &&
                   (anImage.Margin.Top + anImage.Height) > target.Margin.Top && anImage.Margin.Top < (target.Margin.Top + target.Height))
             {
-                Console.WriteLine("BOOM PARANG NENENG B KANYANG KATAWAN");
-
+              //  Console.WriteLine("BOOM PARANG NENENG B KANYANG KATAWAN");
 
             }
             else
             {
-                Console.WriteLine("OUT NA SIR OUT NA SIR");
+               // Console.WriteLine("OUT NA SIR OUT NA SIR");
             }
         }
 
